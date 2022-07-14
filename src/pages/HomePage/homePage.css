@@ -1,0 +1,19 @@
+#banner_homepage .ant-carousel .slick-dots-bottom {
+  bottom: 50px;
+}
+
+.custom-dots.slick-dots li button {
+  background-color: gray;
+  opacity: 1;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+
+.custom-dots.slick-dots li.slick-active button {
+  background: red;
+  opacity: 1;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
