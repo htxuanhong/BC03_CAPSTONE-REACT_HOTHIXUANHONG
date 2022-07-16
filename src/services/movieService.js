@@ -19,6 +19,16 @@ export const movieService = {
       }
     );
   },
+  getMoviePickGroup: (maPhim) => {
+    return axios.get(
+      `${BASE_URL}/api/QuanLyRap/LayThongTinLichChieuPhim?MaPhim=${maPhim}`,
+      {
+        headers: {
+          TokenCybersoft: TOKEN_CYBERSOFT,
+        },
+      }
+    );
+  },
   getMovieListBanner: () => {
     return axios.get(`${BASE_URL}/api/QuanLyPhim/LayDanhSachBanner`, {
       headers: {
@@ -29,6 +39,16 @@ export const movieService = {
   getDetailMovie: (maPhim) => {
     return axios.get(
       `${BASE_URL}/api/QuanLyPhim/LayThongTinPhim?MaPhim=${maPhim}`,
+      {
+        headers: {
+          TokenCybersoft: TOKEN_CYBERSOFT,
+        },
+      }
+    );
+  },
+  getPurchaseTicker: (maLichChieu) => {
+    return axios.get(
+      `${BASE_URL}/api/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=${maLichChieu}`,
       {
         headers: {
           TokenCybersoft: TOKEN_CYBERSOFT,

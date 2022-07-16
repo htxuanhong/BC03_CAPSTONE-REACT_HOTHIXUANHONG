@@ -35,10 +35,12 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div id="banner_homepage">
-      <MovieCarouselBanner chunkedBannerList={bannerList} />
-      <div className="px-72">
-        <div id="carousel_homepage" className="container mx-auto  ">
+    <div>
+      <div id="banner_homepage">
+        <MovieCarouselBanner chunkedBannerList={bannerList} />
+      </div>
+      <div className="px-64">
+        <div id="carousel_homepage" className="container mx-auto ">
           <MovieCarousel chunkedList={movieList} />
         </div>
 

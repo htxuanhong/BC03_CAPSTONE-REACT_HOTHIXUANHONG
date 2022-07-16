@@ -9,7 +9,7 @@ export function LayoutTheme(props) {
       <div>
         <Component />
       </div>
-      <footer className="h-20 bg-blue-500 w-full"></footer>
+      {/* <footer className="h-20 bg-blue-500 w-full"></footer> */}
     </div>
   );
 }

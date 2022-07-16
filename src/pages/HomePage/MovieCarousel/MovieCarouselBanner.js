@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 
 const MovieCarouselBanner = ({ chunkedBannerList }) => {
   const carouselRef = useRef();
-  console.log("vu.nguyen", carouselRef);
+  // console.log(carouselRef);
 
   const onChange = (currentSlide) => {
     console.log("bannerlist:", currentSlide);

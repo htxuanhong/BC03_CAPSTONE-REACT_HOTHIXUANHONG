@@ -16,7 +16,7 @@ export default function UserNav() {
   };
   let handleLogin = () => {
     dispatch(setUserInforAction(null));
-    localStorageService.setUserInfor();
+    localStorageService.removeUserInfor();
     window.location.href = "/login";
   };
   let handleRegister = () => {

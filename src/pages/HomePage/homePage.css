@@ -1,7 +1,9 @@
 #banner_homepage .ant-carousel .slick-dots-bottom {
   bottom: 50px;
 }
-
+#carousel_homepage .ant-carousel .slick-dots-bottom {
+  bottom: 32px;
+}
 .custom-dots.slick-dots li button {
   background-color: gray;
   opacity: 1;

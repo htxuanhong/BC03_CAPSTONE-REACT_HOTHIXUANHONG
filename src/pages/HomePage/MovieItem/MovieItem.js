@@ -41,12 +41,25 @@ const MovieItem = ({ movie }) => {
           </span>
         }
       />
-      <NavLink
-        to={`detail/${movie.maPhim}`}
-        className="bg-red-400 px-5 py-2 rounded text-white hover:text-white mt-5 inline-block"
-      >
-        Xem chi tiết
-      </NavLink>
+      <div className="flex">
+        <NavLink
+          to={`detail/${movie.maPhim}`}
+          className="bg-red-600 py-2 px-1 rounded text-white hover:text-white mt-3 text-xs inline-block mr-2"
+        >
+          <span className=" border border-pink-300 rounded py-1 px-2 font-bold">
+            XEM CHI TIẾT
+          </span>
+        </NavLink>
+        <NavLink
+          to={`pick-group/${movie.maPhim}`}
+          className="bg-red-600 py-2 px-1 rounded text-white hover:text-white mt-3 text-xs inline-block "
+        >
+          <span className=" border border-pink-300 rounded py-1 px-2 font-bold">
+            {" "}
+            MUA VÉ
+          </span>
+        </NavLink>
+      </div>
     </Card>
   );
 };

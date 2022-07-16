@@ -25,7 +25,7 @@ export default function MovieTabs() {
     return dataRow.map((heThongRap, index) => {
       return (
         <TabPane
-          tab={<img src={heThongRap.logo} className=" w-10 h-10" />}
+          tab={<img src={heThongRap.logo} className=" w-10 h-10" alt="" />}
           key={index}
         >
           <Tabs tabPosition="left" style={{ height: 500 }}>

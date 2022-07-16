@@ -1,10 +1,3 @@
-// import React from "react";
-
-// export default function RegisterPage() {
-//   return <div>
-
-//   </div>;
-// }
 import { Button, Checkbox, Form, Input } from "antd";
 import React from "react";
 
