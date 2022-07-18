@@ -31,7 +31,8 @@ export const userRoutes = [
   },
   {
     path: "/register",
-    component: RegisterPage,
+    component: <LayoutTheme Component={RegisterPage} />,
+    isUseLayout: true,
   },
   {
     path: "/purchase/:id",

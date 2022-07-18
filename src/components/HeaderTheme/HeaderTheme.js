@@ -9,10 +9,16 @@ export default function HeaderTheme() {
         <span className="text-red-500 text-3xl font-medium">Logo</span>
       </NavLink>
 
-      <div className="space-x-5 text-lg font-medium text-gray-600">
-        <span>Lịch chiếu</span>
-        <span>Cụm rạp</span>
-        <span>Tin tức</span>
+      <div className="space-x-5 text-lg font-medium text-gray-600 ">
+        <span className="hover:text-orange-600 hover:ease-in duration-150">
+          Lịch chiếu
+        </span>
+        <span className="hover:text-orange-600 hover:ease-in duration-150">
+          Cụm rạp
+        </span>
+        <span className="hover:text-orange-600 hover:ease-in duration-150">
+          Tin tức
+        </span>
       </div>
 
       <UserNav />

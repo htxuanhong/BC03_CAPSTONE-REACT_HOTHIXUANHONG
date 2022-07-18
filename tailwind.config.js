@@ -6,6 +6,9 @@ module.exports = {
       padding: {
         19: "19px",
       },
+      colors: {
+        grayxh: "#9e9e9e",
+      },
     },
   },
   plugins: [],

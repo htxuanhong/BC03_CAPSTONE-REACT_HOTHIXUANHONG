@@ -46,6 +46,10 @@ export default function HomePage() {
 
         <MovieTabs />
       </div>
+      <footer
+        className="h-96 w-full"
+        style={{ backgroundColor: "#212121" }}
+      ></footer>
     </div>
   );
 }

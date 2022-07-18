@@ -25,22 +25,34 @@ export default function MovieTabs() {
     return dataRow.map((heThongRap, index) => {
       return (
         <TabPane
-          tab={<img src={heThongRap.logo} className=" w-10 h-10" alt="" />}
+          tab={
+            <div className="pb-3" style={{ borderBottom: "1px solid #e9e8e6" }}>
+              <img src={heThongRap.logo} className=" w-12 h-12 " alt="" />
+            </div>
+          }
           key={index}
         >
-          <Tabs tabPosition="left" style={{ height: 500 }}>
+          <Tabs tabPosition="left" style={{ height: 600 }}>
             {heThongRap.lstCumRap.map((cumRap, index) => {
               return (
                 <TabPane
                   tab={
-                    <div className="w-48 whitespace-normal text-left">
-                      <p>{cumRap.tenCumRap}</p>
-                      <p>{cumRap.diaChi}</p>
+                    <div
+                      className="w-48 whitespace-normal text-left pb-3 "
+                      style={{
+                        borderBottom: "1px solid #e9e8e6",
+                        marginLeft: "-24px",
+                      }}
+                    >
+                      <p style={{ color: "#00ac4d", fontSize: "16px" }}>
+                        {cumRap.tenCumRap}
+                      </p>
+                      <p className="text-gray-400">{cumRap.diaChi}</p>
                     </div>
                   }
                   key={index}
                 >
-                  <div style={{ height: 500, overflowY: " scroll" }}>
+                  <div style={{ height: 600, overflowY: " scroll" }}>
                     {cumRap.danhSachPhim.map((phim, index) => {
                       if (index < 20) {
                         return <MovieTabItem key={index} movie={phim} />;
@@ -58,7 +70,8 @@ export default function MovieTabs() {
 
   return (
     <Tabs
-      style={{ height: 500, marginTop: "35px" }}
+      className="border border-slate-200"
+      style={{ height: 600, marginTop: "35px", marginBottom: "50px" }}
       tabPosition="left"
       defaultActiveKey="1"
       onChange={onChange}

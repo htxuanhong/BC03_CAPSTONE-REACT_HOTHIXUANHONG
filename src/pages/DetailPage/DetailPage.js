@@ -8,7 +8,7 @@ export default function DetailPage() {
   const [movie, setMovie] = useState([]);
 
   let handlePurchase = () => {
-    window.location.href = "/pick-group/:id";
+    window.location.href = `/pick-group/${movie.maPhim}`;
   };
   useEffect(() => {
     movieService
@@ -20,10 +20,10 @@ export default function DetailPage() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [id]);
 
   return (
-    <div className=" w-4/6 mx-auto py-10 space-y-10">
+    <div className=" w-4/6 mx-auto py-10 space-y-8">
       <div className="flex items-center space-x-20 ">
         <div>
           <img

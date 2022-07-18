@@ -1,0 +1,36 @@
+.bg-img {
+  background-image: url(http://demo1.cybersoft.edu.vn/static/media/backapp.b46ef3a1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.bg-input {
+  background: #fdfbfe;
+  box-shadow: rgb(0 0 0 / 16%) 0px 1px 4px;
+  border-radius: 8px;
+}
+.bg-input .ant-input-affix-wrapper {
+  border-radius: 8px;
+  padding: 0 12px;
+  width: 15rem;
+}
+.bg-input .ant-form-item-control-input {
+  border-radius: 8px;
+  min-height: 0;
+}
+.ant-form-item {
+  margin-bottom: 0 !important;
+}
+.input-form .ant-input {
+  width: 15rem;
+  border-radius: 8px;
+  padding: 0 12px;
+}
+.prefix-input .ant-input-group .ant-input {
+  border-radius: 0 8px 8px 0;
+  padding: 0 11px;
+}
+.prefix-input span .ant-input-group-addon {
+  border-radius: 8px 0 0 8px;
+}

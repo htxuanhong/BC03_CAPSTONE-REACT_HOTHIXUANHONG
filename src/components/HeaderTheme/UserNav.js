@@ -1,3 +1,4 @@
+import { LoginOutlined, LogoutOutlined, UserOutlined } from "@ant-design/icons";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setUserInforAction } from "../../redux/actions/userAction";
@@ -29,28 +30,59 @@ export default function UserNav() {
       {userInfor ? (
         <div className="space-x-3">
           {" "}
-          <span>{userInfor?.hoTen}</span>{" "}
-          <button
+          <span className="hover:text-orange-600 text-grayxh font-bold">
+            {userInfor?.hoTen}
+          </span>{" "}
+          <span className="border-l-2 py-1 text-grayxh"></span>
+          <a
+            href
+            className="py-2 rounded font-medium leading-5 text-grayxh text-lg "
             onClick={handleLogout}
-            className=" border-gray-700 border-2 px-4 py-2 rounded text-gray-700"
           >
-            Đăng xuất
-          </button>
+            <span className="inline-flex p-1  border rounded-full bg-grayxh   ">
+              <LogoutOutlined
+                style={{
+                  fontSize: "20px",
+                  color: "white",
+                }}
+              />
+            </span>{" "}
+            <span className="hover:text-orange-600">Đăng Xuất</span>
+          </a>
         </div>
       ) : (
-        <div className="space-x-3">
-          <button
-            className=" border-blue-700 border-2 px-4 py-2 rounded text-blue-700"
+        <div className="space-x-3  ">
+          <a
+            href
+            className="py-2 rounded font-medium leading-5 text-grayxh text-lg "
             onClick={handleLogin}
           >
-            Đăng nhập
-          </button>
-          <button
+            <span className="inline-flex p-1  border rounded-full bg-grayxh   ">
+              <LoginOutlined
+                style={{
+                  fontSize: "20px",
+                  color: "white",
+                }}
+              />
+            </span>{" "}
+            <span className="hover:text-orange-600 ">Đăng nhập</span>
+          </a>
+          <span className="border-l-2 py-1 text-grayxh"></span>
+          <a
+            href
+            className="py-2 rounded font-medium leading-5 text-grayxh text-lg  "
             onClick={handleRegister}
-            className=" border-red-700 border-2 px-4 py-2 rounded text-red-700"
           >
-            Đăng kí
-          </button>
+            <span className="inline-flex p-1  border rounded-full bg-grayxh ">
+              <UserOutlined
+                style={{
+                  fontSize: "20px",
+                  color: "white",
+                }}
+              />
+            </span>{" "}
+            <span className="hover:text-orange-600 ">Đăng ký</span>
+          </a>
         </div>
       )}
     </div>
