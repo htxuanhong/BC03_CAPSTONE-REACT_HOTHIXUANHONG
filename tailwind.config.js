@@ -8,6 +8,7 @@ module.exports = {
       },
       colors: {
         grayxh: "#9e9e9e",
+        blackxh: "#212121",
       },
     },
   },

@@ -1,5 +1,6 @@
 import _ from "lodash";
 import React, { useEffect, useState } from "react";
+import FooterLayout from "../../HOC/FooterLayout";
 import { movieService } from "../../services/movieService";
 import "./homePage.css";
 import MovieCarousel from "./MovieCarousel/MovieCarousel";
@@ -46,10 +47,7 @@ export default function HomePage() {
 
         <MovieTabs />
       </div>
-      <footer
-        className="h-96 w-full"
-        style={{ backgroundColor: "#212121" }}
-      ></footer>
+      <FooterLayout />
     </div>
   );
 }

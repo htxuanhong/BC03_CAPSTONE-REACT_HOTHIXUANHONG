@@ -36,52 +36,31 @@ export default function UserNav() {
           <span className="border-l-2 py-1 text-grayxh"></span>
           <a
             href
-            className="py-2 rounded font-medium leading-5 text-grayxh text-lg "
+            className="py-2 rounded font-medium leading-5 text-grayxh text-lg hover:text-orange-600"
             onClick={handleLogout}
           >
-            <span className="inline-flex p-1  border rounded-full bg-grayxh   ">
-              <LogoutOutlined
-                style={{
-                  fontSize: "20px",
-                  color: "white",
-                }}
-              />
-            </span>{" "}
-            <span className="hover:text-orange-600">Đăng Xuất</span>
+            <LogoutOutlined className="inline-flex p-1 mr-2 border rounded-full bg-grayxh text-white text-xl" />
+            Đăng Xuất
           </a>
         </div>
       ) : (
         <div className="space-x-3  ">
           <a
             href
-            className="py-2 rounded font-medium leading-5 text-grayxh text-lg "
+            className="py-2 rounded font-medium leading-5 text-grayxh text-lg hover:text-orange-600"
             onClick={handleLogin}
           >
-            <span className="inline-flex p-1  border rounded-full bg-grayxh   ">
-              <LoginOutlined
-                style={{
-                  fontSize: "20px",
-                  color: "white",
-                }}
-              />
-            </span>{" "}
-            <span className="hover:text-orange-600 ">Đăng nhập</span>
+            <LoginOutlined className="inline-flex p-1 mr-2 border rounded-full bg-grayxh text-white text-xl" />
+            Đăng nhập
           </a>
           <span className="border-l-2 py-1 text-grayxh"></span>
           <a
             href
-            className="py-2 rounded font-medium leading-5 text-grayxh text-lg  "
+            className="py-2 rounded font-medium leading-5 text-grayxh text-lg hover:text-orange-600"
             onClick={handleRegister}
           >
-            <span className="inline-flex p-1  border rounded-full bg-grayxh ">
-              <UserOutlined
-                style={{
-                  fontSize: "20px",
-                  color: "white",
-                }}
-              />
-            </span>{" "}
-            <span className="hover:text-orange-600 ">Đăng ký</span>
+            <UserOutlined className="inline-flex p-1 mr-2 border rounded-full bg-grayxh text-white text-xl" />
+            Đăng ký
           </a>
         </div>
       )}
