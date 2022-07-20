@@ -31,7 +31,7 @@ export default function PickGroupPage() {
           tab={<img src={heThongRap.logo} className="w-10 h-10" alt="" />}
           key={ri}
         >
-          <Tabs tabPosition="left" style={{ height: 400 }}>
+          <Tabs tabPosition="left" className="h-400">
             {heThongRap.cumRapChieu.map((cumRap, cri) => {
               return (
                 <TabPane
@@ -45,28 +45,27 @@ export default function PickGroupPage() {
                   }
                   key={cri}
                 >
-                  <div style={{ height: 400, overflowY: "scroll" }}>
+                  <div className="h-400 overflow-y-scroll">
                     {cumRap.lichChieuPhim.map((x, lcpi) => {
                       return (
-                        <div
-                          key={lcpi}
-                          className="border border-x-slate-200 bg-gray-100 p-2 rounded w-max my-3 hover:font-bold hover:text-sm "
-                        >
-                          <p>
-                            <span style={{ color: "#7A4069" }}>{x.tenRap}</span>{" "}
-                            -
-                            <span style={{ color: "#00ac4d" }}>
-                              {" "}
-                              {moment(x.ngayChieuGioChieu).format(
-                                "DD/MM/YYYY "
-                              )}
-                            </span>{" "}
-                            ~{" "}
-                            <span style={{ color: "#EB4747" }}>
-                              {" "}
-                              {moment(x.ngayChieuGioChieu).format("HH:MM")}
-                            </span>
-                          </p>
+                        <div className="border border-x-slate-200 bg-gray-100 p-2 rounded cursor-pointer  hover:font-bold hover:text-sm w-max my-3 ">
+                          <a href={`/purchase/${x.maLichChieu}`} key={lcpi}>
+                            <p>
+                              <span className="text-violetxh">{x.tenRap}</span>{" "}
+                              -
+                              <span className="text-greenlight">
+                                {" "}
+                                {moment(x.ngayChieuGioChieu).format(
+                                  "DD/MM/YYYY "
+                                )}
+                              </span>{" "}
+                              ~{" "}
+                              <span className="text-redLight">
+                                {" "}
+                                {moment(x.ngayChieuGioChieu).format("HH:MM")}
+                              </span>
+                            </p>
+                          </a>
                         </div>
                       );
                     })}
@@ -81,18 +80,15 @@ export default function PickGroupPage() {
   };
 
   return (
-    <div
-      className="px-64 py-20 "
-      style={{ background: "#06283D", backgroundAttachment: "fixed" }}
-    >
+    <div className="px-64 py-20 bg-fixed bg-pick ">
       <div className="border border-orange-100 bg-white rounded-lg">
         <div className="pt-10 text-center text-lg font-bold">
-          Phim: <span style={{ color: "#18978F" }}>{dataRow?.tenPhim}</span>
+          Phim: <span className="text-greenxh">{dataRow?.tenPhim}</span>
         </div>
 
         {dataRow?.heThongRapChieu?.length > 0 ? (
           <Tabs
-            style={{ height: 400, marginTop: "35px", marginLeft: "40px" }}
+            className="h-400 mt-9 ml-10"
             tabPosition="left"
             defaultActiveKey="1"
             onChange={onChange}
@@ -100,7 +96,7 @@ export default function PickGroupPage() {
             {renderContent()}
           </Tabs>
         ) : (
-          <div className="text-center py-32" style={{ height: 400 }}>
+          <div className="text-center py-32 h-400">
             Xin lỗi, phim chưa có lịch chiếu, hãy chọn phim khác.
           </div>
         )}

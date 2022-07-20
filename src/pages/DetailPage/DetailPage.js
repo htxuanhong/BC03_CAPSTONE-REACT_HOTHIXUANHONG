@@ -7,7 +7,7 @@ export default function DetailPage() {
   let { id } = useParams();
   const [movie, setMovie] = useState([]);
 
-  let handlePurchase = () => {
+  let handlePickGroup = () => {
     window.location.href = `/pick-group/${movie.maPhim}`;
   };
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function DetailPage() {
             alt=""
           />
           <button
-            onClick={handlePurchase}
+            onClick={handlePickGroup}
             className="bg-red-600 py-1.5 px-1 rounded text-white text-md "
             style={{ marginTop: "15px", marginLeft: "35%" }}
           >

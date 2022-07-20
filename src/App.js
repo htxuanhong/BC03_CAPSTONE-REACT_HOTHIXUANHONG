@@ -1,10 +1,12 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./App.css";
+import SpinnerComponent from "./components/SpinnerComponent/SpinnerComponent";
 import { userRoutes } from "./routes/userRoutes";
 
 function App() {
   return (
-    <div className="">
+    <div className="App">
+      <SpinnerComponent />
       <BrowserRouter>
         <Switch>
           {/* <Route path="/" component={HomePage} /> */}

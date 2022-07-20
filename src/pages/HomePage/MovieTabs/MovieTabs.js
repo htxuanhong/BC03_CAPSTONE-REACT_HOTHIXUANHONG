@@ -32,7 +32,7 @@ export default function MovieTabs() {
           }
           key={index}
         >
-          <Tabs tabPosition="left" style={{ height: 600 }}>
+          <Tabs tabPosition="left" className="h-600">
             {heThongRap.lstCumRap.map((cumRap, index) => {
               return (
                 <TabPane
@@ -52,7 +52,7 @@ export default function MovieTabs() {
                   }
                   key={index}
                 >
-                  <div style={{ height: 600, overflowY: " scroll" }}>
+                  <div className="h-600 overflow-y-scroll">
                     {cumRap.danhSachPhim.map((phim, index) => {
                       if (index < 20) {
                         return <MovieTabItem key={index} movie={phim} />;

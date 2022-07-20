@@ -1,0 +1,55 @@
+.ghe,
+.daDat,
+.vip {
+  width: 35px;
+  height: 35px;
+  font-size: 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ghe {
+  cursor: pointer;
+  margin: 3px 0;
+  background-color: rgb(233, 233, 233);
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 5px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.daDat {
+  margin: 3px 0;
+  color: rgba(0, 0, 0, 0.26);
+  background: rgb(118, 118, 118);
+}
+.vip {
+  margin: 3px 0;
+  background: orange;
+}
+.seat-type p {
+  font-size: 15px;
+  font-weight: 600;
+}
+.ticker-infor h2 {
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+}
+.ticker-infor p {
+  color: green;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.ticker-infor hr {
+  margin: 0 15px;
+}
