@@ -15,3 +15,23 @@ export const userReducer = (state = initailState, action) => {
       return state;
   }
 };
+
+// import { createSlice } from "@reduxjs/toolkit";
+// import { localStorageService } from "../../services/localStorageService";
+// let initialState = {
+//   userInfor: localStorageService.getUserInfor(),
+// };
+
+// const userSlice = createSlice({
+//   name: "userSlice",
+//   initialState,
+//   reducers: {
+//     setUserInfor: (state, { payload }) => {
+//       state.user = payload;
+//     },
+//   },
+// });
+
+// export default userSlice.reducer;
+
+// export const { setUserInfor } = userSlice.actions;

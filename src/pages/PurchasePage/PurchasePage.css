@@ -1,6 +1,7 @@
 .ghe,
 .daDat,
-.vip {
+.vip,
+.gheDangChon {
   width: 35px;
   height: 35px;
   font-size: 15px;
@@ -32,8 +33,12 @@
   background: rgb(118, 118, 118);
 }
 .vip {
+  cursor: pointer;
   margin: 3px 0;
   background: orange;
+}
+.vip:hover {
+  background-color: rgba(0, 0, 0, 0.04);
 }
 .seat-type p {
   font-size: 15px;
@@ -52,4 +57,25 @@
 
 .ticker-infor hr {
   margin: 0 15px;
+}
+.gheDangChon {
+  background: rgb(0 128 0);
+}
+.order-modal .ant-btn-primary {
+  background: rgb(0, 124, 128);
+  border-radius: 5px;
+  border: none;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.order-modal .ant-modal-footer button:first-child {
+  display: none;
+}
+.order-modal .ant-modal-footer {
+  display: flex;
+  justify-content: center;
+  border: none;
+  padding-bottom: 20px;
 }
