@@ -40,8 +40,8 @@ export default function HomePage() {
       <div id="banner_homepage">
         <MovieCarouselBanner chunkedBannerList={bannerList} />
       </div>
-      <div className="px-64">
-        <div id="carousel_homepage" className="container mx-auto ">
+      <div className="container mx-auto" style={{ maxWidth: "1000px" }}>
+        <div id="carousel_homepage">
           <MovieCarousel chunkedList={movieList} />
         </div>
 

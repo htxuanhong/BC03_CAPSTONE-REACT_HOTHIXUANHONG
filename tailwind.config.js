@@ -15,6 +15,9 @@ module.exports = {
         greenlight: "#00ac4d",
         redLight: "#EB4747",
         greenlightxh: "#8bc34a",
+        blackDark: "rgba(0,0,0,0.5)",
+        bluexh: "#46E1FF",
+        grayLight: "#bbb",
       },
       height: {
         400: "400px",

@@ -5,7 +5,6 @@ import { userRoutes } from "./routes/userRoutes";
 function App() {
   return (
     <div className="App">
-      {/* <SpinnerComponent /> */}
       <BrowserRouter>
         <Switch>
           {/* <Route path="/" component={HomePage} /> */}

@@ -24,7 +24,6 @@
   grid-template-rows: repeat(10, 1fr);
   gap: 5px;
   width: 70%;
-  margin: 0 auto;
 }
 
 .daDat {
@@ -78,4 +77,10 @@
   justify-content: center;
   border: none;
   padding-bottom: 20px;
+}
+.dat-ve {
+  background: #d00000;
+}
+.dat-ve:hover {
+  background: #9d0209;
 }

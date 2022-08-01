@@ -15,10 +15,10 @@ const MovieCarousel = ({ chunkedList }) => {
     >
       {chunkedList.map((movies, index) => {
         return (
-          <div className="h-max w-full py-20">
+          <div className="h-max w-full py-16">
             <div className="grid grid-cols-4 gap-6 ">
               {movies.map((item) => {
-                return <MovieItem movie={item} />;
+                return <MovieItem movie={item} key={index} />;
               })}
             </div>
           </div>

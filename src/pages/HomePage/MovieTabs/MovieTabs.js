@@ -38,14 +38,14 @@ export default function MovieTabs() {
                 <TabPane
                   tab={
                     <div
-                      className="w-48 whitespace-normal text-left pb-3 "
+                      className="w-56 whitespace-normal text-center pb-3 "
                       style={{
                         borderBottom: "1px solid #e9e8e6",
                         marginLeft: "-24px",
                       }}
                     >
-                      <p style={{ color: "#00ac4d", fontSize: "16px" }}>
-                        {cumRap.tenCumRap}
+                      <p style={{ color: "#00ac4d" }} className="font-medium">
+                        {cumRap.tenCumRap.toUpperCase()}
                       </p>
                       <p className="text-gray-400">{cumRap.diaChi}</p>
                     </div>

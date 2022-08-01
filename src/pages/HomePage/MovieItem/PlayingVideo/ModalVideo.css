@@ -1,0 +1,11 @@
+.modal-video .ant-modal-content .ant-modal-close-x {
+  color: white;
+  font-size: 30px;
+}
+.modal-video .ant-modal-content button {
+  top: -56px;
+  right: -39px;
+}
+.modal-video .ant-modal-content {
+  background: transparent;
+}

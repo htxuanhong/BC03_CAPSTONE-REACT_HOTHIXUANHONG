@@ -1,4 +1,4 @@
-import { SET_USER_INFOR } from "../constants/userConstants";
+import { SET_USER_INFOR } from "../constants/Constants";
 
 export const setUserInforAction = (user) => {
   return {

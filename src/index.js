@@ -1,11 +1,12 @@
+import "antd/dist/antd.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "antd/dist/antd.css";
-import "./index.css";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
+import App from "./App";
+import "./fontawesome";
+import "./index.css";
 import { store } from "./redux/reducers/rootReducer";
+import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

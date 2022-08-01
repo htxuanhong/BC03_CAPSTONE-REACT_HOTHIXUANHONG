@@ -1,7 +1,8 @@
-import { LoginOutlined, LogoutOutlined, UserOutlined } from "@ant-design/icons";
+import { LoginOutlined, UserOutlined } from "@ant-design/icons";
+import { Dropdown, Menu, Space } from "antd";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setUserInforAction } from "../../redux/actions/userAction";
+import { setUserInforAction } from "../../redux/actions/action";
 import { localStorageService } from "../../services/localStorageService";
 
 export default function UserNav() {
@@ -25,23 +26,53 @@ export default function UserNav() {
     localStorageService.getUserInfor();
     window.location.href = "/register";
   };
+
+  const menu = (
+    <Menu
+      items={[
+        {
+          key: "1",
+          label: (
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.antgroup.com"
+            >
+              Thông tin của bạn
+            </a>
+          ),
+        },
+
+        {
+          key: "2",
+          label: (
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href
+              onClick={handleLogout}
+            >
+              Đăng xuất
+            </a>
+          ),
+        },
+      ]}
+    />
+  );
   return (
     <div>
       {userInfor ? (
         <div className="space-x-3">
-          {" "}
-          <span className="hover:text-orange-600 text-grayxh font-bold">
-            {userInfor?.hoTen}
-          </span>{" "}
-          <span className="border-l-2 py-1 text-grayxh"></span>
-          <a
-            href
-            className="py-2 rounded font-medium leading-5 text-grayxh text-lg hover:text-orange-600"
-            onClick={handleLogout}
-          >
-            <LogoutOutlined className="inline-flex p-1 mr-2 border rounded-full bg-grayxh text-white text-xl" />
-            Đăng Xuất
-          </a>
+          Xin Chào, {""}
+          <Dropdown overlay={menu}>
+            <a onClick={(e) => e.preventDefault()} href>
+              <Space>
+                <span className="hover:text-orange-600 text-greenxh font-bold text-xl underline">
+                  {userInfor?.hoTen}!
+                </span>
+              </Space>
+            </a>
+          </Dropdown>
         </div>
       ) : (
         <div className="space-x-3  ">

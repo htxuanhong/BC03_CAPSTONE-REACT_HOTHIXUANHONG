@@ -54,8 +54,8 @@ export default function PurchasePage() {
     setIsModalVisible(false);
   };
   return (
-    <div className="flex flex-wrap ">
-      <div className="seat-list-container basis-2/3 mx-auto pt-10  ">
+    <div className="flex flex-wrap px-40">
+      <div className="seat-list-container basis-2/3  pt-10  ">
         <div className="grid-row ">
           {dataRow?.danhSachGhe?.map((item, index) => {
             let className = "ghe";
@@ -96,7 +96,10 @@ export default function PurchasePage() {
           </div>
         </div>
       </div>
-      <div className="basis-1/3 my-8" style={{ boxShadow: "0 0 5px grey" }}>
+      <div
+        className="basis-1/3 my-8 rounded-md"
+        style={{ boxShadow: "0 0 5px grey" }}
+      >
         <div className=" ticker-infor">
           <div className="text-4xl text-greenlightxh text-center py-7">
             {selectedSeats.length > 0 ? handleSumMoney((x) => x.giaVe) : 0} VND
@@ -108,12 +111,12 @@ export default function PurchasePage() {
           </div>
           <hr />
           <div className="flex justify-between py-4 px-5">
-            <h2>Địa chỉ</h2>
+            <h2>Địa chỉ:</h2>
             <p>{dataRow?.thongTinPhim?.diaChi}</p>
           </div>
           <hr />
           <div className="flex justify-between py-4 px-5">
-            <h2>Rạp</h2>
+            <h2>Rạp:</h2>
             <p>{dataRow?.thongTinPhim?.tenRap}</p>
           </div>
           <hr />
@@ -134,17 +137,17 @@ export default function PurchasePage() {
           </div>
           <hr />
           <div className="flex justify-between py-4 px-5">
-            <h2>Chọn</h2>
+            <h2>Chọn:</h2>
             <p>
               {selectedSeats.length > 0
                 ? selectedSeats.map((x) => "Ghế " + x.tenGhe).join(", ")
                 : ""}
             </p>
           </div>
-
+          <hr />
           <div
             onClick={showModal}
-            className="bg-red-500 hover:bg-red-800 py-4 text-white font-medium text-2xl text-center "
+            className="hover:bg-red-800 py-5 dat-ve text-white font-medium text-2xl text-center mt-6 rounded-b-md cursor-pointer"
           >
             ĐẶT VÉ
           </div>

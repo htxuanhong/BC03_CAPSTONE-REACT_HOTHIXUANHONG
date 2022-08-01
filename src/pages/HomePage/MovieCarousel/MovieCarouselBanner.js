@@ -1,4 +1,4 @@
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
+import { DoubleLeftOutlined, DoubleRightOutlined } from "@ant-design/icons";
 import { Carousel } from "antd";
 import React, { useRef } from "react";
 
@@ -21,24 +21,25 @@ const MovieCarouselBanner = ({ chunkedBannerList }) => {
     <div>
       <div
         onClick={prevSlice}
-        className="text-slate-300 hover:text-slate-500 font-bold absolute z-10"
+        className="text-slate-300 hover:text-slate-500 font-extrabold absolute z-10 flex items-center"
         style={{
-          top: "345px",
+          top: "47%",
           fontSize: "48px",
         }}
       >
-        <LeftOutlined />
+        <DoubleLeftOutlined />
       </div>
+
       <div
         onClick={nextSlice}
-        className="text-slate-300 hover:text-slate-500 font-bold absolute z-10"
+        className="text-slate-300 hover:text-slate-500 font-extrabold absolute z-10"
         style={{
-          top: "345px",
+          top: "45%",
           right: 0,
           fontSize: "48px",
         }}
       >
-        <RightOutlined />
+        <DoubleRightOutlined />
       </div>
       <Carousel
         arrows
@@ -57,7 +58,7 @@ const MovieCarouselBanner = ({ chunkedBannerList }) => {
                   <img
                     alt=""
                     src={item.hinhAnh}
-                    className="w-full"
+                    className="w-full relative"
                     style={{ height: "610px" }}
                   />
                 );
@@ -71,26 +72,3 @@ const MovieCarouselBanner = ({ chunkedBannerList }) => {
 };
 
 export default MovieCarouselBanner;
-// {
-//   "statusCode": 200,
-//   "message": "Xử lý thành công!",
-//   "content": [
-//     {
-//       "maBanner": 1,
-//       "maPhim": 1282,
-//       "hinhAnh": "https://movienew.cybersoft.edu.vn/hinhanh/ban-tay-diet-quy.png"
-//     },
-//     {
-//       "maBanner": 2,
-//       "maPhim": 1283,
-//       "hinhAnh": "https://movienew.cybersoft.edu.vn/hinhanh/lat-mat-48h.png"
-//     },
-//     {
-//       "maBanner": 3,
-//       "maPhim": 1284,
-//       "hinhAnh": "https://movienew.cybersoft.edu.vn/hinhanh/cuoc-chien-sinh-tu.png"
-//     }
-//   ],
-//   "dateTime": "2022-07-14T16:04:16.3240484+07:00",
-//   "messageConstants": null
-// }
