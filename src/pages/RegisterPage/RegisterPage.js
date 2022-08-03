@@ -1,9 +1,12 @@
 import { Form, Input, message } from "antd";
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { userService } from "../../services/userService";
 import "./RegisterPage.css";
 
 const RegisterPage = () => {
+  let history = useHistory();
+
   const onFinish = (values) => {
     console.log("Success:", values);
     userService
@@ -11,6 +14,9 @@ const RegisterPage = () => {
       .then((res) => {
         message.success("Đăng ký thành công");
         console.log(res);
+        setTimeout(() => {
+          history.push("/login");
+        }, 2000);
       })
       .catch((err) => {
         console.log(err);
@@ -162,6 +168,15 @@ const RegisterPage = () => {
           >
             Đăng ký
           </button>
+
+          <div>
+            Bạn đã có tài khoản? {""}{" "}
+            <span>
+              <a href="/login" className="underline text-blue-500">
+                Đăng nhập
+              </a>
+            </span>{" "}
+          </div>
         </div>
       </div>
     </Form>

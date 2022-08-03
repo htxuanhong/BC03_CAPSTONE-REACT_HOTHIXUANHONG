@@ -3,7 +3,6 @@ import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import FooterLayout from "../../HOC/FooterLayout";
-import { useWindowSize } from "../../Hook/useWindowSize";
 import { movieService } from "../../services/movieService";
 import ModalPlayingTrailer from "../HomePage/MovieItem/PlayingVideo/ModalPlayingTrailer";
 
@@ -11,8 +10,8 @@ export default function DetailPage() {
   let { id } = useParams();
   const [movie, setMovie] = useState([]);
   const [visible, setVisible] = useState(false);
-  const [open, setOpen] = useState("");
-  let windowSize = useWindowSize();
+  const [trailer, setTrailer] = useState("");
+
   let handlePickGroup = () => {
     window.location.href = `/pick-group/${movie.maPhim}`;
   };
@@ -30,31 +29,30 @@ export default function DetailPage() {
 
   return (
     <div
+      className="w-screen"
       style={{
         backgroundImage: `url(
           "https://2phimmoi.net/wp-content/themes/halimmovies/media/img/body_bg.gif"
         )`,
       }}
     >
-      <div className="py-8 w-4/6  mx-auto">
-        <div className="py-10 space-y-8 bg-blackDark rounded-md">
+      <div className="py-8 container  mx-auto" style={{ maxWidth: "1000px" }}>
+        <div className="py-10  bg-blackDark rounded-md ">
           <div className="flex items-center justify-between space-x-20 mx-20 ">
             <div>
               <div
-                className="w-80 rounded basis-1/3 "
+                className="lg:w-80 md:w-64 w-48  lg:h-430 md:h-80 h-72 rounded basis-1/3 "
                 style={{
-                  height: "430px",
                   backgroundImage: `url(${movie.hinhAnh})`,
-                  backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                 }}
               ></div>
-              <div className="flex my-3 justify-center ">
+              <div className="flex mt-4 justify-center ">
                 <button
                   onClick={() => {
                     setVisible(true);
-                    setOpen(movie.trailer);
+                    setTrailer(movie.trailer);
                   }}
                   className="bg-red-600 py-1.5 px-1 rounded text-white text-md mr-2 "
                 >
@@ -76,7 +74,12 @@ export default function DetailPage() {
             </div>
             <div className="basis-2/3">
               <div className=" text-white text-left ">
-                <p className="text-2xl text-yellow-100 ">{movie.tenPhim}</p>
+                <p
+                  className="text-2xl text-yellow-100 "
+                  style={{ textTransform: "uppercase" }}
+                >
+                  {movie.tenPhim}
+                </p>
                 <p className="mt-5">
                   Trạng thái:{" "}
                   <span className="text-bluexh " style={{ fontSize: "17px" }}>
@@ -131,7 +134,7 @@ export default function DetailPage() {
           <ModalPlayingTrailer
             visible={visible}
             setVisible={setVisible}
-            movie={open}
+            movie={trailer}
           />
         )}
       </div>

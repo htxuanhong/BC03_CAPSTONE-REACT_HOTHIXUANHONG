@@ -37,8 +37,8 @@ const MovieItem = ({ movie }) => {
         >
           <div className="relative h-full w-full opacity-0 hover:opacity-100  bg-blackDark">
             <div
-              className="absolute icon-play cursor-pointer "
-              style={{ top: "108px", left: "90px" }}
+              className="absolute icon-play cursor-pointer top-1/2 left-1/2"
+              style={{ transform: "translate(-50%,-50%)" }}
               onClick={() => {
                 setVisible(true);
                 setTrailer(movie.trailer);

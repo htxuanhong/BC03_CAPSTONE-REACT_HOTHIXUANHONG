@@ -1,5 +1,4 @@
-import { LoginOutlined, UserOutlined } from "@ant-design/icons";
-import { Dropdown, Menu, Space } from "antd";
+import { LoginOutlined, LogoutOutlined, UserOutlined } from "@ant-design/icons";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setUserInforAction } from "../../redux/actions/action";
@@ -18,7 +17,7 @@ export default function UserNav() {
   };
   let handleLogin = () => {
     dispatch(setUserInforAction(null));
-    localStorageService.removeUserInfor();
+
     window.location.href = "/login";
   };
   let handleRegister = () => {
@@ -27,52 +26,23 @@ export default function UserNav() {
     window.location.href = "/register";
   };
 
-  const menu = (
-    <Menu
-      items={[
-        {
-          key: "1",
-          label: (
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.antgroup.com"
-            >
-              Thông tin của bạn
-            </a>
-          ),
-        },
-
-        {
-          key: "2",
-          label: (
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href
-              onClick={handleLogout}
-            >
-              Đăng xuất
-            </a>
-          ),
-        },
-      ]}
-    />
-  );
   return (
     <div>
       {userInfor ? (
         <div className="space-x-3">
-          Xin Chào, {""}
-          <Dropdown overlay={menu}>
-            <a onClick={(e) => e.preventDefault()} href>
-              <Space>
-                <span className="hover:text-orange-600 text-greenxh font-bold text-xl underline">
-                  {userInfor?.hoTen}!
-                </span>
-              </Space>
-            </a>
-          </Dropdown>
+          Xin Chào,{" "}
+          <span className="hover:text-orange-600 text-greenxh font-bold text-xl underline">
+            {userInfor?.hoTen}!
+          </span>
+          <span className="border-l-2 py-1 text-grayxh"></span>
+          <a
+            href
+            className="py-2 rounded font-medium leading-5 text-grayxh text-lg hover:text-orange-600"
+            onClick={handleLogout}
+          >
+            <LogoutOutlined className="inline-flex p-1 mr-2 border rounded-full bg-grayxh text-white text-xl" />
+            Đăng xuất
+          </a>
         </div>
       ) : (
         <div className="space-x-3  ">

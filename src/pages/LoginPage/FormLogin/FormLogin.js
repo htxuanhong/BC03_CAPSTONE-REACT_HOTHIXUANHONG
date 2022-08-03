@@ -89,7 +89,7 @@ export default function FormLogin() {
             Bạn chưa có tài khoản? {""}
             <span>
               <a href="/register" className="underline text-blue-500">
-                Đăng kí thôi nào!
+                Đăng kí
               </a>
             </span>
           </div>
