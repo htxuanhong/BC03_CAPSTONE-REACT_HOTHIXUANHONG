@@ -1,0 +1,14 @@
+.logo {
+  margin: 10px 15px;
+  text-align: center;
+  color: #ffafcc;
+  font-size: 22px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}

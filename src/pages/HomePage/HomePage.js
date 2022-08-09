@@ -1,6 +1,6 @@
 import _ from "lodash";
 import React, { useEffect, useState } from "react";
-import FooterLayout from "../../HOC/FooterLayout";
+import FooterLayout from "../../components/FooterTheme/FooterLayout";
 import { movieService } from "../../services/movieService";
 import "./homePage.css";
 import MovieCarousel from "./MovieCarousel/MovieCarousel";

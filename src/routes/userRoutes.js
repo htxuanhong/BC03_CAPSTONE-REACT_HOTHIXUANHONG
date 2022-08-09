@@ -1,5 +1,8 @@
 import { LayoutTheme } from "../HOC/Layout";
 import NotFoundPage from "../pages/404Page/404Page";
+import Dashboard from "../pages/Admin/Dashboard/Dashboard";
+import Films from "../pages/Admin/Films/Films";
+import UserAdmin from "../pages/Admin/UserAdmin/UserAdmin";
 import DetailPage from "../pages/DetailPage/DetailPage";
 import HomePage from "../pages/HomePage/HomePage";
 import LoginPage from "../pages/LoginPage/LoginPage";
@@ -38,6 +41,18 @@ export const userRoutes = [
     path: "/purchase/:id",
     component: <LayoutTheme Component={PurchasePage} />,
     isUseLayout: true,
+  },
+  {
+    path: "/admin",
+    component: Dashboard,
+  },
+  {
+    path: "/films",
+    component: Films,
+  },
+  {
+    path: "/user",
+    component: UserAdmin,
   },
   {
     path: "*",

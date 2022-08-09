@@ -3,7 +3,7 @@ import { BASE_URL, TOKEN_CYBERSOFT } from "./configURL";
 
 export const movieService = {
   getMovieList: () => {
-    return axios.get(`${BASE_URL}/api/QuanLyPhim/LayDanhSachPhim`, {
+    return axios.get(`${BASE_URL}/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP13`, {
       headers: {
         TokenCybersoft: TOKEN_CYBERSOFT,
       },
@@ -11,7 +11,7 @@ export const movieService = {
   },
   getMovieByTheater: () => {
     return axios.get(
-      `${BASE_URL}/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maNhom=GP01`,
+      `${BASE_URL}/api/QuanLyRap/LayThongTinLichChieuHeThongRap?maNhom=GP13`,
       {
         headers: {
           TokenCybersoft: TOKEN_CYBERSOFT,

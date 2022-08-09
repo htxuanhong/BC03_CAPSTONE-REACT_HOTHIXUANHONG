@@ -2,7 +2,7 @@ import { Progress } from "antd";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import FooterLayout from "../../HOC/FooterLayout";
+import FooterLayout from "../../components/FooterTheme/FooterLayout";
 import { movieService } from "../../services/movieService";
 import ModalPlayingTrailer from "../HomePage/MovieItem/PlayingVideo/ModalPlayingTrailer";
 

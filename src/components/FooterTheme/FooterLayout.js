@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { movieService } from "../services/movieService";
+import { movieService } from "../../services/movieService";
 import "./footerLayout.css";
 export default function FooterLayout() {
   const [dataRow, setDataRaw] = useState([]);
