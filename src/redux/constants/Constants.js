@@ -3,3 +3,5 @@ export const SET_USER_INFOR = "SET_USER_INFOR";
 export const SET_SHOW_SPINNER = "SET_SHOW_SPINNER";
 
 export const SET_HIDE_SPINNER = "SET_HIDE_SPINNER";
+
+export const Get_MOVIE_BY_THEATER = "Get_MOVIE_BY_THEATER";

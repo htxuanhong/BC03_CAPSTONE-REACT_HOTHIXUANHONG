@@ -1,16 +1,21 @@
 import _ from "lodash";
 import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import FooterLayout from "../../components/FooterTheme/FooterLayout";
+import { getMovieByTheaterSer } from "../../redux/actions/action";
 import { movieService } from "../../services/movieService";
 import "./homePage.css";
 import MovieCarousel from "./MovieCarousel/MovieCarousel";
 import MovieCarouselBanner from "./MovieCarousel/MovieCarouselBanner";
-import MovieTabs from "./MovieTabs/MovieTabs";
+import MovieTabResponsive from "./MovieTabs/MovieTabResponsive";
 
 export default function HomePage() {
   const [movieList, setMovieList] = useState([]);
   const [bannerList, setBannerList] = useState([]);
 
+  const dispatch = useDispatch();
+
+  dispatch(getMovieByTheaterSer());
   console.log("movieList: ", movieList);
   useEffect(() => {
     let fetchMoviesList = async () => {
@@ -44,8 +49,9 @@ export default function HomePage() {
         <div id="carousel_homepage">
           <MovieCarousel chunkedList={movieList} />
         </div>
-
-        <MovieTabs />
+        <div id="movie-tab" className="">
+          <MovieTabResponsive />
+        </div>
       </div>
       <FooterLayout />
     </div>

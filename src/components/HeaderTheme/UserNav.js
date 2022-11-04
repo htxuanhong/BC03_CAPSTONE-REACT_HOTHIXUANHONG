@@ -37,10 +37,10 @@ export default function UserNav() {
           <span className="border-l-2 py-1 text-grayxh"></span>
           <a
             href
-            className="py-2 rounded font-medium leading-5 text-grayxh text-lg hover:text-orange-600"
+            className="py-2 rounded font-medium leading-5 text-grayxh lg:text-lg hover:text-orange-600"
             onClick={handleLogout}
           >
-            <LogoutOutlined className="inline-flex p-1 mr-2 border rounded-full bg-grayxh text-white text-xl" />
+            <LogoutOutlined className="inline-flex p-1 mr-2 border rounded-full bg-grayxh lg:text-xl text-white " />
             Đăng xuất
           </a>
         </div>
@@ -48,19 +48,19 @@ export default function UserNav() {
         <div className="space-x-3  ">
           <a
             href
-            className="py-2 rounded font-medium leading-5 text-grayxh text-lg hover:text-orange-600"
+            className="py-2 rounded font-medium leading-5 text-grayxh lg:text-lg hover:text-orange-600"
             onClick={handleLogin}
           >
-            <LoginOutlined className="inline-flex p-1 mr-2 border rounded-full bg-grayxh text-white text-xl" />
+            <LoginOutlined className="inline-flex lg:text-xl p-1 mr-2 border rounded-full bg-grayxh text-white " />
             Đăng nhập
           </a>
           <span className="border-l-2 py-1 text-grayxh"></span>
           <a
             href
-            className="py-2 rounded font-medium leading-5 text-grayxh text-lg hover:text-orange-600"
+            className="py-2 rounded font-medium leading-5 text-grayxh lg:text-lg hover:text-orange-600"
             onClick={handleRegister}
           >
-            <UserOutlined className="inline-flex p-1 mr-2 border rounded-full bg-grayxh text-white text-xl" />
+            <UserOutlined className="inline-flex lg:text-xl p-1 mr-2 border rounded-full bg-grayxh text-white " />
             Đăng ký
           </a>
         </div>

@@ -1,11 +1,11 @@
 import React from "react";
-import HeaderTheme from "../components/HeaderTheme/HeaderTheme";
+import HeaderResponsive from "../components/HeaderTheme/HeaderResponsive";
 
 export function LayoutTheme(props) {
   const { Component } = props;
   return (
     <div>
-      <HeaderTheme />
+      <HeaderResponsive />
       <div>
         <Component />
       </div>

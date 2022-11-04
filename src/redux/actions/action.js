@@ -1,4 +1,6 @@
+import { movieService } from "../../services/movieService";
 import {
+  Get_MOVIE_BY_THEATER,
   SET_HIDE_SPINNER,
   SET_SHOW_SPINNER,
   SET_USER_INFOR,
@@ -17,4 +19,20 @@ export const setShowSpinner = () => {
 
 export const setHideSpinner = () => {
   return { type: SET_HIDE_SPINNER };
+};
+
+export const getMovieByTheaterSer = () => {
+  return (dispatch) => {
+    movieService
+      .getMovieByTheater()
+      .then((res) => {
+        dispatch({
+          type: Get_MOVIE_BY_THEATER,
+          payload: res.data.content,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 };

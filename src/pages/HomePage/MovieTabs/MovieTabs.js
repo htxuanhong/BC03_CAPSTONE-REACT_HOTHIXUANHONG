@@ -1,58 +1,43 @@
 import { Tabs } from "antd";
-import { useEffect, useState } from "react";
-import { movieService } from "../../../services/movieService";
+import { useSelector } from "react-redux";
 import MovieTabItem from "./MovieTabItem";
+
 const { TabPane } = Tabs;
 
 const onChange = (key) => {
   console.log(key);
 };
 export default function MovieTabs() {
-  const [dataRow, setDataRaw] = useState([]);
-  useEffect(() => {
-    movieService
-      .getMovieByTheater()
-      .then((res) => {
-        console.log(res);
-        setDataRaw(res.data.content);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  let movieListTheater = useSelector(
+    (state) => state.movieReducer.movieListByTheater
+  );
 
   let renderContent = () => {
-    return dataRow.map((heThongRap, index) => {
+    return movieListTheater.map((heThongRap, index) => {
       return (
         <TabPane
           tab={
-            <div className="pb-3" style={{ borderBottom: "1px solid #e9e8e6" }}>
+            <div>
               <img src={heThongRap.logo} className=" w-12 h-12 " alt="" />
             </div>
           }
           key={index}
         >
-          <Tabs tabPosition="left" className="h-600">
+          <Tabs tabPosition="left" className="h-500">
             {heThongRap.lstCumRap.map((cumRap, index) => {
               return (
                 <TabPane
                   tab={
-                    <div
-                      className="w-56 whitespace-normal text-center pb-3 "
-                      style={{
-                        borderBottom: "1px solid #e9e8e6",
-                        marginLeft: "-24px",
-                      }}
-                    >
+                    <div className="w-72 whitespace-normal text-center">
                       <p style={{ color: "#00ac4d" }} className="font-medium">
                         {cumRap.tenCumRap.toUpperCase()}
                       </p>
-                      <p className="text-gray-400">{cumRap.diaChi}</p>
+                      <p className="text-gray-500">{cumRap.diaChi}</p>
                     </div>
                   }
                   key={index}
                 >
-                  <div className="h-600 overflow-y-scroll">
+                  <div className="h-500 overflow-y-scroll ">
                     {cumRap.danhSachPhim.map((phim, index) => {
                       if (index < 20) {
                         return <MovieTabItem key={index} movie={phim} />;
@@ -70,8 +55,8 @@ export default function MovieTabs() {
 
   return (
     <Tabs
-      className="border border-slate-200"
-      style={{ height: 600, marginTop: "35px", marginBottom: "50px" }}
+      className="border border-slate-200 "
+      style={{ height: 500, marginTop: "35px", marginBottom: "50px" }}
       tabPosition="left"
       defaultActiveKey="1"
       onChange={onChange}

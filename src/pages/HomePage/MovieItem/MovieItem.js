@@ -4,20 +4,6 @@ import { NavLink } from "react-router-dom";
 import ModalPlayingTrailer from "./PlayingVideo/ModalPlayingTrailer";
 import "./PlayingVideo/play.css";
 
-// {
-// "maPhim": 9129,
-// "tenPhim": "hehehe",
-// "biDanh": "hehehe",
-// "trailer": "hehehe",
-// "hinhAnh": "https://movienew.cybersoft.edu.vn/hinhanh/hehehe_gp01.jpg",
-// "moTa": "hehehe",
-// "maNhom": "GP01",
-// "ngayKhoiChieu": "2022-06-07T00:00:00",
-// "danhGia": 1,
-// "hot": true,
-// "dangChieu": true,
-// "sapChieu": true
-// }
 const MovieItem = ({ movie }) => {
   const [visible, setVisible] = useState(false);
   const [trailer, setTrailer] = useState("");
@@ -27,7 +13,7 @@ const MovieItem = ({ movie }) => {
     <div>
       <div className="h-full hover:shadow-lg transition-all duration-300 ">
         <div
-          className="h-72 w-full flex justify-center items-center "
+          className="lg:h-72 md:h-60 sm:h-44 h-36 w-full flex justify-center items-center "
           style={{
             backgroundImage: `url(${movie.hinhAnh})`,
             backgroundPosition: "center",

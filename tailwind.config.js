@@ -20,9 +20,15 @@ module.exports = {
         grayLight: "#bbb",
       },
       height: {
+        350: "350px",
         400: "400px",
+        500: "500px",
         600: "600px",
+        610: "610px",
         430: "430px",
+      },
+      minHeight: {
+        100: "100px",
       },
     },
   },

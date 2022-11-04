@@ -4,12 +4,12 @@ import UserNav from "./UserNav";
 
 export default function HeaderTheme() {
   return (
-    <div className="h-16 w-full flex items-center justify-between shadow-lg px-20 bg-slate-100">
+    <div className="h-12 w-full flex items-center justify-between shadow-lg px-24 bg-slate-100">
       <NavLink to="/">
         <img
           src="https://mpng.subpng.com/20180615/oli/kisspng-cinema-film-director-television-film-digital-millennium-copyright-act-5b23cf472887a5.197278891529073479166.jpg"
           alt=""
-          className="h-16 w-16 rounded-full"
+          className="h-12 w-12 rounded-full"
         />
       </NavLink>
 

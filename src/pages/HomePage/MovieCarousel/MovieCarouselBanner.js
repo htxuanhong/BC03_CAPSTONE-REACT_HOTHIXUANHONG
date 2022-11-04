@@ -18,26 +18,19 @@ const MovieCarouselBanner = ({ chunkedBannerList }) => {
   };
 
   return (
-    <div>
+    <div className="relative">
       <div
         onClick={prevSlice}
-        className="text-slate-300 hover:text-slate-500 font-extrabold absolute z-10 flex items-center"
-        style={{
-          top: "47%",
-          fontSize: "48px",
-        }}
+        className="text-slate-300 left-0 lg:text-5xl md:text-4xl text-3xl  hover:text-slate-500 font-extrabold absolute z-10 flex top-1/2 "
+        style={{ transform: "translateY(-50%)" }}
       >
         <DoubleLeftOutlined />
       </div>
 
       <div
         onClick={nextSlice}
-        className="text-slate-300 hover:text-slate-500 font-extrabold absolute z-10"
-        style={{
-          top: "45%",
-          right: 0,
-          fontSize: "48px",
-        }}
+        className="text-slate-300 lg:text-5xl md:text-4xl text-3xl right-0 hover:text-slate-500 font-extrabold flex top-1/2  absolute z-10"
+        style={{ transform: "translateY(-50%)" }}
       >
         <DoubleRightOutlined />
       </div>
@@ -58,8 +51,7 @@ const MovieCarouselBanner = ({ chunkedBannerList }) => {
                   <img
                     alt=""
                     src={item.hinhAnh}
-                    className="w-full relative"
-                    style={{ height: "610px" }}
+                    className="w-full relative lg:h-610 md:h-400 sm:h-80"
                   />
                 );
               })}

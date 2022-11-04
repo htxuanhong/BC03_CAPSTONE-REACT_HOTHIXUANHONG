@@ -1,9 +1,7 @@
 #banner_homepage .ant-carousel .slick-dots-bottom {
   bottom: 50px;
 }
-#carousel_homepage .ant-carousel .slick-dots-bottom {
-  bottom: 32px;
-}
+
 .custom-dots.slick-dots li button {
   background-color: gray;
   opacity: 1;
@@ -18,4 +16,35 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
+}
+#movie-tab .ant-tabs-tab-active {
+  background: rgb(236, 236, 236);
+}
+#movie-tab .ant-tabs-tabpane {
+  padding-left: 0;
+}
+
+#movie-tab .ant-tabs-tab-btn {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+#movie-tab .ant-tabs-tab-btn::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 0.5px;
+  width: 85%;
+  background-color: rgba(82, 81, 81, 0.2);
+  z-index: 10;
+}
+@media (max-width: 1024px) {
+  #movie-tab .ant-tabs-tab {
+    margin: 0;
+    padding: 0;
+  }
 }
